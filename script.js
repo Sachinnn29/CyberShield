@@ -1,111 +1,201 @@
-// ==========================================
-// CYBERSHIELD JAVASCRIPT
-// ==========================================
+/* =========================================
+   CyberShield JavaScript
+========================================= */
 
 
-// Smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(link => {
+/* ================= YEAR ================= */
 
-    link.addEventListener('click', function(event) {
-
-        const target = document.querySelector(this.getAttribute('href'));
-
-        if (target) {
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-
-    });
-
-});
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
 
-// Navbar effect on scroll
-window.addEventListener('scroll', function() {
+/* ================= QUIZ ================= */
 
-    const navbar = document.querySelector('.navbar');
+const questions =
+    document.querySelectorAll(".question");
 
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(5, 7, 13, 0.96)';
-    } else {
-        navbar.style.background = 'rgba(5, 7, 13, 0.82)';
-    }
+const progressText =
+    document.getElementById("progressText");
 
-});
+const progressBar =
+    document.getElementById("progressBar");
 
+const quizResult =
+    document.getElementById("quizResult");
 
-// Current year
-document.getElementById('year').textContent = new Date().getFullYear();
-
-
-// ==========================================
-// CYBER SAFETY QUIZ
-// ==========================================
-
-let quizScore = 0;
-let answeredQuestions = 0;
-
-function checkAnswer(button, correct) {
-
-    const question = button.parentElement;
-
-    // Prevent answering the same question twice
-    if (question.dataset.answered === "true") {
-        return;
-    }
-
-    question.dataset.answered = "true";
-
-    answeredQuestions++;
-
-    if (correct) {
-
-        quizScore++;
-
-        button.style.background = "#00e5ff";
-        button.style.color = "#000";
-
-    } else {
-
-        button.style.background = "#ff4d6d";
-        button.style.color = "#fff";
-
-    }
+const resetQuiz =
+    document.getElementById("resetQuiz");
 
 
-    // Disable all buttons for this question
-    const buttons = question.querySelectorAll('button');
-
-    buttons.forEach(btn => {
-        btn.disabled = true;
-        btn.style.cursor = "default";
-    });
+let score = 0;
+let answered = 0;
 
 
-    // Show final score
-    if (answeredQuestions === 5) {
+/* ================= PROGRESS ================= */
 
-        let message = "";
+function updateProgress() {
 
-        if (quizScore === 5) {
-            message = "Excellent! You are highly cyber-aware 🛡️";
-        } else if (quizScore >= 3) {
-            message = "Good job! Keep improving your cyber safety habits 🔐";
-        } else {
-            message = "Keep learning! Improve your cybersecurity awareness ⚠️";
-        }
+    progressText.textContent =
+        `${answered} of ${questions.length} answered`;
 
-        document.getElementById("quizResult").innerHTML =
-            `Your Cyber Safety Score: <strong>${quizScore}/5</strong><br>${message}`;
+    const percentage =
+        (answered / questions.length) * 100;
 
-    }
-
+    progressBar.style.width =
+        `${percentage}%`;
 }
 
 
-// Console message
-console.log("🛡️ CyberShield loaded successfully!");
-console.log("Stay safe online!");
+/* ================= RESULT ================= */
+
+function showResult() {
+
+    if (answered !== questions.length) {
+        return;
+    }
+
+    let message = "";
+
+    if (score === 5) {
+
+        message =
+            "Excellent! You have a strong understanding of basic cybersecurity safety habits.";
+
+    } else if (score >= 3) {
+
+        message =
+            "Good work! A little more awareness can make your online habits safer.";
+
+    } else {
+
+        message =
+            "Keep learning! Review the Safety Tips section and try the quiz again.";
+
+    }
+
+    quizResult.innerHTML =
+        `Your score: <strong>${score}/${questions.length}</strong><br>${message}`;
+}
+
+
+/* ================= QUESTIONS ================= */
+
+questions.forEach((question) => {
+
+    const buttons =
+        question.querySelectorAll("button");
+
+    const correctAnswer =
+        question.dataset.answer;
+
+
+    buttons.forEach((button) => {
+
+        button.addEventListener("click", () => {
+
+            /* Don't allow answering the same question twice */
+
+            if (question.dataset.answered === "true") {
+                return;
+            }
+
+
+            question.dataset.answered = "true";
+
+            answered++;
+
+
+            const selected =
+                button.dataset.value;
+
+
+            /* Disable all buttons */
+
+            buttons.forEach((item) => {
+
+                item.disabled = true;
+
+
+                /* Highlight correct answer */
+
+                if (
+                    item.dataset.value ===
+                    correctAnswer
+                ) {
+
+                    item.classList.add("correct");
+
+                }
+
+            });
+
+
+            /* Check selected answer */
+
+            if (selected === correctAnswer) {
+
+                score++;
+
+            } else {
+
+                button.classList.add("wrong");
+
+            }
+
+
+            updateProgress();
+
+            showResult();
+
+        });
+
+    });
+
+});
+
+
+/* ================= RESET QUIZ ================= */
+
+resetQuiz.addEventListener("click", () => {
+
+    score = 0;
+
+    answered = 0;
+
+
+    questions.forEach((question) => {
+
+        question.dataset.answered =
+            "false";
+
+
+        const buttons =
+            question.querySelectorAll("button");
+
+
+        buttons.forEach((button) => {
+
+            button.disabled = false;
+
+            button.classList.remove(
+                "correct",
+                "wrong"
+            );
+
+        });
+
+    });
+
+
+    quizResult.textContent =
+        "Your result will appear here after all five answers.";
+
+
+    updateProgress();
+
+});
+
+
+/* ================= INITIAL STATE ================= */
+
+updateProgress();
