@@ -3,136 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CyberShield - Learn how to stay safe online and improve your cybersecurity awareness.">
-    <title>CyberShield | Stay Safe Online</title>
+
+    <meta name="description"
+        content="CyberShield - Cybersecurity Awareness Survey Among Students">
+
+    <title>CyberShield | Cybersecurity Awareness</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">🛡️ CyberShield</div>
+<!-- ================= NAVBAR ================= -->
 
-    <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#awareness">Awareness</a>
-        <a href="#threats">Threats</a>
-        <a href="#safety">Safety Tips</a>
-        <a href="#quiz">Quiz</a>
-        <a href="#survey">Survey</a>
-    </div>
+<header class="header">
+    <nav class="navbar">
 
-    <a href="#survey" class="nav-button">Take Survey</a>
-</nav>
+        <a href="#home" class="logo">
+            🛡️ CyberShield
+        </a>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#threats">Threats</a>
+            <a href="#tips">Safety Tips</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#survey">Survey</a>
+            <a href="#results">Results</a>
+        </div>
+
+        <a href="#survey" class="nav-button">
+            Take Survey
+        </a>
+
+    </nav>
+</header>
 
 
-<!-- HERO -->
+<main>
+
+<!-- ================= HERO ================= -->
+
 <section class="hero" id="home">
 
     <div class="hero-content">
-        <span class="tag">CYBERSECURITY AWARENESS</span>
 
-        <h1>Think Before<br><span>You Click.</span></h1>
+        <p class="eyebrow">
+            COLLEGE AWARENESS PROJECT
+        </p>
 
-        <p>
-            Learn simple cybersecurity habits, recognize online threats,
-            protect your personal information and stay safer online.
+        <h1>
+            Think Before You
+            <span>Click.</span>
+        </h1>
+
+        <p class="hero-description">
+            CyberShield is a student-focused cybersecurity awareness
+            project designed to understand common cyber risks and
+            encourage safer online habits.
         </p>
 
         <div class="hero-buttons">
-            <a href="#awareness" class="primary-button">Explore Security →</a>
-            <a href="#survey" class="secondary-button">Take Survey</a>
+            <a href="#about" class="btn primary">
+                Explore Project
+            </a>
+
+            <a href="#survey" class="btn secondary">
+                Take Survey
+            </a>
         </div>
 
-        <div class="stats">
-            <div>
-                <strong>24/7</strong>
-                <span>Stay Alert</span>
-            </div>
-
-            <div>
-                <strong>2FA</strong>
-                <span>Extra Protection</span>
-            </div>
-
-            <div>
-                <strong>100%</strong>
-                <span>Awareness Matters</span>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="cyber-visual">
-
-        <div class="orbit orbit-one"></div>
-        <div class="orbit orbit-two"></div>
-
-        <div class="shield">
-            🛡️
-        </div>
-
-        <div class="floating-card card-one">
-            ⚠️ Threat Detected
-        </div>
-
-        <div class="floating-card card-two">
-            🔐 2FA Protected
-        </div>
-
-        <div class="floating-card card-three">
-            ✓ System Secure
+        <div class="project-info">
+            <strong>Project Topic</strong>
+            <span>Cybersecurity Awareness Survey Among Students</span>
         </div>
 
     </div>
 
-</section>
 
+    <div class="hero-card">
 
-<!-- AWARENESS -->
-<section class="section" id="awareness">
-
-    <div class="section-heading">
-        <span>BUILD GOOD HABITS</span>
-        <h2>Cyber Awareness</h2>
-        <p>
-            Small security habits can make a big difference.
-        </p>
-    </div>
-
-    <div class="awareness-grid">
-
-        <div class="info-card">
-            <div class="icon">🔑</div>
-            <h3>Strong Passwords</h3>
-            <p>
-                Use strong and unique passwords for your important accounts.
-            </p>
+        <div class="hero-card-title">
+            <span class="online-dot"></span>
+            Cyber Safety Checklist
         </div>
 
-        <div class="info-card">
-            <div class="icon">🔐</div>
-            <h3>Two-Factor Authentication</h3>
-            <p>
-                Enable 2FA to add an extra layer of protection to your accounts.
-            </p>
+        <div class="check">
+            <b>✓</b>
+            <span>Use strong passwords</span>
         </div>
 
-        <div class="info-card">
-            <div class="icon">🎣</div>
-            <h3>Phishing Awareness</h3>
-            <p>
-                Be careful with suspicious emails, messages and links.
-            </p>
+        <div class="check">
+            <b>✓</b>
+            <span>Check links before clicking</span>
         </div>
 
-        <div class="info-card">
-            <div class="icon">👁️</div>
-            <h3>Privacy Protection</h3>
-            <p>
-                Think carefully before sharing personal information online.
-            </p>
+        <div class="check">
+            <b>✓</b>
+            <span>Enable two-factor authentication</span>
+        </div>
+
+        <div class="check">
+            <b>✓</b>
+            <span>Never share OTPs</span>
+        </div>
+
+        <div class="hero-card-footer">
+            Better awareness = safer digital habits.
         </div>
 
     </div>
@@ -140,16 +117,84 @@
 </section>
 
 
-<!-- THREATS -->
-<section class="section dark-section" id="threats">
+<!-- ================= ABOUT ================= -->
 
-    <div class="section-heading">
-        <span>KNOW THE RISKS</span>
-        <h2>Common Cyber Threats</h2>
-        <p>
-            Understanding threats helps you recognize them before they cause harm.
+<section class="section" id="about">
+
+    <div class="section-title">
+
+        <p class="eyebrow">
+            ABOUT THE PROJECT
         </p>
+
+        <h2>
+            Why cybersecurity awareness matters
+        </h2>
+
+        <p>
+            Students use smartphones, social media, email, online
+            payments and educational platforms every day. Understanding
+            basic cybersecurity can help prevent avoidable mistakes.
+        </p>
+
     </div>
+
+
+    <div class="about-grid">
+
+        <div class="info-card">
+            <span>01</span>
+            <h3>Objective</h3>
+            <p>
+                Understand students' awareness of common cybersecurity
+                risks and promote safer online behaviour.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <span>02</span>
+            <h3>Topics Covered</h3>
+            <p>
+                Phishing, malware, online fraud, identity theft,
+                passwords, privacy, OTP safety and 2FA.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <span>03</span>
+            <h3>Student Survey</h3>
+            <p>
+                Students participated in a cybersecurity awareness
+                survey to share their online safety habits.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= THREATS ================= -->
+
+<section class="section light" id="threats">
+
+    <div class="section-title center">
+
+        <p class="eyebrow">
+            KNOW THE RISKS
+        </p>
+
+        <h2>
+            Common Cyber Threats
+        </h2>
+
+        <p>
+            Knowing common threats makes it easier to recognise
+            suspicious activity.
+        </p>
+
+    </div>
+
 
     <div class="threat-grid">
 
@@ -157,33 +202,126 @@
             <span>01</span>
             <h3>Phishing</h3>
             <p>
-                Fake emails, messages or websites designed to trick you
-                into revealing sensitive information.
+                Fake emails, messages or websites designed to steal
+                passwords, OTPs or personal information.
             </p>
+            <small>
+                Watch for suspicious links and urgent messages.
+            </small>
         </div>
+
 
         <div class="threat-card">
             <span>02</span>
             <h3>Malware</h3>
             <p>
-                Malicious software can damage devices or steal information.
+                Malicious software that can affect devices or expose
+                information.
             </p>
+            <small>
+                Avoid unknown files and unsafe downloads.
+            </small>
         </div>
+
 
         <div class="threat-card">
             <span>03</span>
             <h3>Online Fraud</h3>
             <p>
-                Scammers may use fake offers, messages or websites to steal money
-                or personal information.
+                Fake offers, websites and messages used to obtain
+                money or personal information.
             </p>
+            <small>
+                Be careful with unrealistic offers.
+            </small>
         </div>
+
 
         <div class="threat-card">
             <span>04</span>
             <h3>Identity Theft</h3>
             <p>
-                Criminals may misuse personal information to impersonate someone.
+                Personal information may be misused to impersonate
+                someone or access accounts.
+            </p>
+            <small>
+                Monitor unusual account activity.
+            </small>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SAFETY TIPS ================= -->
+
+<section class="section" id="tips">
+
+    <div class="section-title center">
+
+        <p class="eyebrow">
+            PRACTICAL HABITS
+        </p>
+
+        <h2>
+            Simple Safety Tips
+        </h2>
+
+        <p>
+            Small habits can make a big difference in online safety.
+        </p>
+
+    </div>
+
+
+    <div class="tips-grid">
+
+        <div class="tip">
+            <b>01</b>
+            <h3>Strong Passwords</h3>
+            <p>
+                Use strong and unique passwords for important accounts.
+            </p>
+        </div>
+
+        <div class="tip">
+            <b>02</b>
+            <h3>Enable 2FA</h3>
+            <p>
+                Add two-factor authentication whenever available.
+            </p>
+        </div>
+
+        <div class="tip">
+            <b>03</b>
+            <h3>Check Links</h3>
+            <p>
+                Think before opening unexpected links or attachments.
+            </p>
+        </div>
+
+        <div class="tip">
+            <b>04</b>
+            <h3>Update Devices</h3>
+            <p>
+                Keep your operating system and applications updated.
+            </p>
+        </div>
+
+        <div class="tip">
+            <b>05</b>
+            <h3>Protect Privacy</h3>
+            <p>
+                Avoid sharing unnecessary personal information online.
+            </p>
+        </div>
+
+        <div class="tip">
+            <b>06</b>
+            <h3>Never Share OTP</h3>
+            <p>
+                Never disclose OTPs or passwords to anyone.
             </p>
         </div>
 
@@ -192,101 +330,171 @@
 </section>
 
 
-<!-- SAFETY TIPS -->
-<section class="section" id="safety">
+<!-- ================= QUIZ ================= -->
 
-    <div class="section-heading">
-        <span>STAY PROTECTED</span>
-        <h2>Essential Safety Tips</h2>
-        <p>
-            Follow these simple rules to improve your online security.
+<section class="section light" id="quiz">
+
+    <div class="section-title center">
+
+        <p class="eyebrow">
+            QUICK CHECK
         </p>
-    </div>
 
-    <div class="tips-container">
+        <h2>
+            Test Your Cyber Awareness
+        </h2>
 
-        <div class="tip">
-            <div class="tip-number">01</div>
-            <div>
-                <h3>Never Share OTPs</h3>
-                <p>Never share your OTP or verification code with anyone.</p>
-            </div>
-        </div>
-
-        <div class="tip">
-            <div class="tip-number">02</div>
-            <div>
-                <h3>Keep Software Updated</h3>
-                <p>Install security updates and keep your apps and operating system updated.</p>
-            </div>
-        </div>
-
-        <div class="tip">
-            <div class="tip-number">03</div>
-            <div>
-                <h3>Check Links Before Clicking</h3>
-                <p>Be careful with unexpected links and suspicious websites.</p>
-            </div>
-        </div>
-
-        <div class="tip">
-            <div class="tip-number">04</div>
-            <div>
-                <h3>Protect Your Privacy</h3>
-                <p>Avoid sharing unnecessary personal information online.</p>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- QUIZ -->
-<section class="section quiz-section" id="quiz">
-
-    <div class="section-heading">
-        <span>TEST YOUR KNOWLEDGE</span>
-        <h2>Cyber Safety Quiz</h2>
         <p>
-            Answer these questions and check your cybersecurity awareness.
+            Answer all five questions and check your score.
         </p>
+
     </div>
+
 
     <div class="quiz-box">
 
-        <div class="quiz-question">
-            <h3>1. Should you share your OTP with anyone?</h3>
-            <button onclick="checkAnswer(this, false)">Yes</button>
-            <button onclick="checkAnswer(this, true)">No</button>
+        <div class="progress-text" id="progressText">
+            0 of 5 answered
         </div>
 
-        <div class="quiz-question">
-            <h3>2. What is the safest password?</h3>
-            <button onclick="checkAnswer(this, false)">12345678</button>
-            <button onclick="checkAnswer(this, true)">A strong unique password</button>
+        <div class="progress">
+            <div id="progressBar"></div>
         </div>
 
-        <div class="quiz-question">
-            <h3>3. What should you do with a suspicious link?</h3>
-            <button onclick="checkAnswer(this, true)">Avoid clicking it</button>
-            <button onclick="checkAnswer(this, false)">Click it immediately</button>
+
+        <!-- Question 1 -->
+
+        <div class="question" data-answer="No">
+
+            <h3>
+                1. Should you share an OTP with someone who calls you?
+            </h3>
+
+            <button data-value="Yes">Yes</button>
+            <button data-value="No">No</button>
+
         </div>
 
-        <div class="quiz-question">
-            <h3>4. Does 2FA improve account security?</h3>
-            <button onclick="checkAnswer(this, true)">Yes</button>
-            <button onclick="checkAnswer(this, false)">No</button>
+
+        <!-- Question 2 -->
+
+        <div class="question" data-answer="Strong">
+
+            <h3>
+                2. Which is a better password choice?
+            </h3>
+
+            <button data-value="12345678">12345678</button>
+            <button data-value="Strong">
+                A strong unique password
+            </button>
+
         </div>
 
-        <div class="quiz-question">
-            <h3>5. Should you keep your software updated?</h3>
-            <button onclick="checkAnswer(this, true)">Yes</button>
-            <button onclick="checkAnswer(this, false)">No</button>
+
+        <!-- Question 3 -->
+
+        <div class="question" data-answer="Avoid">
+
+            <h3>
+                3. What should you do with a suspicious link?
+            </h3>
+
+            <button data-value="Avoid">
+                Avoid opening it
+            </button>
+
+            <button data-value="Open">
+                Open it to check
+            </button>
+
         </div>
 
-        <div id="quizResult">
-            Answer all 5 questions to see your score.
+
+        <!-- Question 4 -->
+
+        <div class="question" data-answer="Yes">
+
+            <h3>
+                4. Does two-factor authentication add protection?
+            </h3>
+
+            <button data-value="Yes">Yes</button>
+            <button data-value="No">No</button>
+
+        </div>
+
+
+        <!-- Question 5 -->
+
+        <div class="question" data-answer="Yes">
+
+            <h3>
+                5. Should you keep apps and operating systems updated?
+            </h3>
+
+            <button data-value="Yes">Yes</button>
+            <button data-value="No">No</button>
+
+        </div>
+
+
+        <div class="quiz-result" id="quizResult">
+            Your result will appear here after all five answers.
+        </div>
+
+        <button class="reset" id="resetQuiz">
+            Reset Quiz
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SURVEY ================= -->
+
+<section class="survey" id="survey">
+
+    <div class="survey-box">
+
+        <div>
+
+            <p class="eyebrow">
+                STUDENT SURVEY
+            </p>
+
+            <h2>
+                Help us understand cybersecurity awareness.
+            </h2>
+
+            <p>
+                This survey is part of the CyberShield college project.
+                Students can share their experiences and cybersecurity
+                habits through the Google Form.
+            </p>
+
+        </div>
+
+
+        <div class="survey-action">
+
+            <strong>
+                Google Form
+            </strong>
+
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe28qnUN5zC8UoltVjtoFzeDWerTWIV_srRZvl2x66l_pD55A/viewform?usp=publish-editor"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn primary">
+                Open Survey ↗
+            </a>
+
+            <small>
+                Opens in a new tab
+            </small>
+
         </div>
 
     </div>
@@ -294,59 +502,275 @@
 </section>
 
 
-<!-- SURVEY -->
-<section class="survey-section" id="survey">
+<!-- ================= SURVEY RESULTS ================= -->
 
-    <div class="survey-content">
+<section class="section results-section" id="results">
 
-        <span>YOUR OPINION MATTERS</span>
+    <div class="section-title center">
 
-        <h2>How Cyber-Aware Are You?</h2>
-
-        <p>
-            Take our short cybersecurity awareness survey and share
-            your thoughts. Your response will help us understand
-            cybersecurity habits and awareness.
+        <p class="eyebrow">
+            SURVEY FINDINGS
         </p>
 
-        <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSe28qnUN5zC8UoltVjtoFzeDWerTWIV_srRZvl2x66l_pD55A/viewform?usp=publish-editor"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="survey-button">
-            Take the Survey →
-        </a>
+        <h2>
+            What Did Students Say?
+        </h2>
 
+        <p>
+            Our Cybersecurity Awareness Survey received
+            <strong>125 responses</strong>.
+        </p>
+
+    </div>
+
+
+    <!-- Total Responses -->
+
+    <div class="total-responses">
+
+        <div class="number">
+            125
+        </div>
+
+        <div>
+            <small>TOTAL RESPONSES</small>
+
+            <h3>
+                Students participated in the survey
+            </h3>
+
+            <p>
+                The results help us understand basic cybersecurity
+                habits and awareness among participants.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="results-grid">
+
+
+        <!-- AGE RESULT -->
+
+        <div class="result-card">
+
+            <div class="result-heading">
+
+                <div>
+                    <small>QUESTION 01</small>
+
+                    <h3>
+                        Age Group
+                    </h3>
+                </div>
+
+                <span>
+                    125 responses
+                </span>
+
+            </div>
+
+
+            <div class="chart-area">
+
+                <div class="donut age-chart">
+
+                    <div class="donut-center">
+                        <strong>125</strong>
+                        <small>responses</small>
+                    </div>
+
+                </div>
+
+
+                <div class="legend">
+
+                    <div>
+                        <i class="blue"></i>
+                        <span>Under 18</span>
+                        <strong>56%</strong>
+                    </div>
+
+                    <div>
+                        <i class="red"></i>
+                        <span>18–20</span>
+                        <strong>32.8%</strong>
+                    </div>
+
+                    <div>
+                        <i class="orange"></i>
+                        <span>21–23</span>
+                        <strong>8.8%</strong>
+                    </div>
+
+                    <div>
+                        <i class="green"></i>
+                        <span>Above 23</span>
+                        <strong>2.4%</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="finding">
+                <strong>Finding:</strong>
+                Most participants were under 18.
+            </div>
+
+        </div>
+
+
+        <!-- PASSWORD RESULT -->
+
+        <div class="result-card">
+
+            <div class="result-heading">
+
+                <div>
+                    <small>QUESTION 02</small>
+
+                    <h3>
+                        How often do you change your important passwords?
+                    </h3>
+                </div>
+
+                <span>
+                    125 responses
+                </span>
+
+            </div>
+
+
+            <div class="chart-area">
+
+                <div class="donut password-chart">
+
+                    <div class="donut-center">
+                        <strong>125</strong>
+                        <small>responses</small>
+                    </div>
+
+                </div>
+
+
+                <div class="legend">
+
+                    <div>
+                        <i class="blue"></i>
+                        <span>Regularly</span>
+                        <strong>56%</strong>
+                    </div>
+
+                    <div>
+                        <i class="red"></i>
+                        <span>Sometimes</span>
+                        <strong>35.2%</strong>
+                    </div>
+
+                    <div>
+                        <i class="orange"></i>
+                        <span>Rarely</span>
+                        <strong>7.2%</strong>
+                    </div>
+
+                    <div>
+                        <i class="green"></i>
+                        <span>Never</span>
+                        <strong>1.6%</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="finding">
+                <strong>Finding:</strong>
+                56% of participants change important passwords regularly.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Highlights -->
+
+    <div class="highlights">
+
+        <div>
+            <strong>56%</strong>
+            <span>Participants are under 18</span>
+        </div>
+
+        <div>
+            <strong>56%</strong>
+            <span>Change important passwords regularly</span>
+        </div>
+
+        <div>
+            <strong>125</strong>
+            <span>Total survey responses</span>
+        </div>
+
+    </div>
+
+
+    <div class="result-note">
+        <strong>Project Note:</strong>
+        These results are based on the 125 responses shown in the
+        Google Forms response dashboard. The website displays
+        aggregate results rather than individual student information.
     </div>
 
 </section>
 
 
-<!-- CTA -->
-<section class="cta">
+<!-- ================= CONCLUSION ================= -->
 
-    <h2>Stay Smart. Stay Secure.</h2>
+<section class="conclusion">
 
-    <p>
-        Cybersecurity starts with awareness.
+    <p class="eyebrow">
+        FINAL MESSAGE
     </p>
 
-    <a href="#home" class="primary-button">Back to Top ↑</a>
+    <h2>
+        Stay Alert. Stay Safe.
+    </h2>
+
+    <p>
+        Cybersecurity is not only about technology.
+        It is also about making responsible decisions every day.
+    </p>
+
+    <a href="#home" class="btn primary">
+        Back to Top ↑
+    </a>
 
 </section>
 
+</main>
 
-<!-- FOOTER -->
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
-    <div class="footer-logo">🛡️ CyberShield</div>
+
+    <div>
+        <strong>🛡️ CyberShield</strong>
+
+        <p>
+            Cybersecurity Awareness Survey Among Students
+        </p>
+    </div>
 
     <p>
-        Cybersecurity Awareness Project
+        © <span id="year"></span> CyberShield Student Project
     </p>
 
-    <p class="copyright">
-        © <span id="year"></span> CyberShield. Stay Safe Online.
-    </p>
 </footer>
 
 
